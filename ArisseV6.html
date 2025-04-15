@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arisse Manualidades y Decoraciones</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffafc;
+      color: #4a4a4a;
+    }
+    header {
+      background-image: url('Imagen de portada Arisse.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+    header h1 {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 1.5rem;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #b76ba3;
+    }
+    ul li {
+      margin-bottom: 5px;
+    }
+    .accordion {
+      cursor: pointer;
+      padding: 18px;
+      border-radius: 8px;
+      text-align: left;
+      outline: none;
+      transition: background-color 0.3s;
+      background-color: #f3e5f5;
+      border: none;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    .panel {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f8f3f7;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .catalog-image {
+      max-width: 100px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #d1a3b0;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #mensaje {
+      display: none;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      background-color: #c8e6c9;
+      color: #2e7d32;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Convierte tu evento en algo inolvidable con detalles únicos y hechos con amor</h1>
+  </header>
+
+  <section class="card">
+    <h2>¿Quiénes somos?</h2>
+    <p>Una tienda online que exhibe y vende productos como velas de miel y soya, jabones naturales, shampoos sólidos, sahumerios, entre otros, con descripciones detalladas y opciones de compra seguras. Gestiona inventario, procesa pagos, realiza envíos y ofrece atención al cliente. Ofrecemos la opción de personalización de sus pedidos.</p>
+    <h3>Misión</h3>
+    <p>Transformar momentos especiales en recuerdos inolvidables, con detalles artesanales que despiertan los sentidos, honran la naturaleza y celebran el amor en cada forma.</p>
+    <h3>Visión</h3>
+    <p>Promover un mundo donde lo natural, lo artesanal y lo significativo se unan.</p>
+    <h3>Valores</h3>
+    <ul>
+      <li>Honestidad</li>
+      <li>Calidad</li>
+      <li>Orientación al cliente</li>
+      <li>Innovación</li>
+      <li>Profesionalidad</li>
+      <li>Puntualidad</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Catálogo de productos</h2>
+    <button class="accordion">Baby Shower</button>
+    <div class="panel">
+      <img src="catalogo/Baby_shower/vela1.jpg" class="catalog-image">
+      <img src="catalogo/Baby_shower/vela2.jpg" class="catalog-image">
+    </div>
+    <button class="accordion">Jabones Naturales</button>
+    <div class="panel">
+      <img src="catalogo/Jabones_naturales/jabon1.jpg" class="catalog-image">
+      <img src="catalogo/Jabones_naturales/jabon2.jpg" class="catalog-image">
+    </div>
+    <button class="accordion">Shampoos Sólidos</button>
+    <div class="panel">
+      <img src="catalogo/Shampoos_solidos/shampoo1.jpg" class="catalog-image">
+      <img src="catalogo/Shampoos_solidos/shampoo2.jpg" class="catalog-image">
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Solicita tu pedido</h2>
+    <form id="pedidoForm">
+      <input type="text" name="evento" placeholder="Tipo de evento" required>
+      <input type="text" name="nombre" placeholder="Nombre Completo" required>
+      <input type="tel" name="celular" placeholder="No. Celular" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <select name="catalogo" required>
+        <option value="">Selecciona un catálogo</option>
+        <option value="Baby Shower">Baby Shower</option>
+        <option value="Jabones Naturales">Jabones Naturales</option>
+        <option value="Shampoos Sólidos">Shampoos Sólidos</option>
+      </select>
+      <input type="date" name="fecha" required>
+      <textarea name="personalizacion" placeholder="Necesidades de Personalización"></textarea>
+      <textarea name="mensaje_adicional" placeholder="Ofrecemos descuentos por volumen"></textarea>
+      <button type="submit">Enviar Pedido</button>
+      <div id="mensaje">👍 Gracias, tu pedido ha sido generado.<br>⏳ Redirigiendo al inicio...<br>🎉 Te contactaremos pronto.</div>
+    </form>
+  </section>
+
+  <script>
+    // Acordeones
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const panel = btn.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+
+    // Enviar formulario
+    document.getElementById('pedidoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      fetch('https://script.google.com/macros/s/AKfycbyEj5mZY7n-pLMf-G5nJovz_cURLPUBLICO/exec', {
+        method: 'POST',
+        body: formData
+      })
+      .then(() => {
+        const msg = document.getElementById('mensaje');
+        msg.style.display = 'block';
+        setTimeout(() => {
+          msg.style.display = 'none';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          form.reset();
+        }, 5000);
+      })
+      .catch(err => alert('Error al enviar: ' + err));
+    });
+  </script>
+</body>
+</html>
